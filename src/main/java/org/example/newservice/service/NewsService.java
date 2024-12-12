@@ -117,4 +117,8 @@ public class NewsService {
     public List<News> getAllNews() {
         return newsRepository.findAll();
     }
+
+    public void deleteAllNews(){
+        newsRepository.deleteAll();
+    }
 }

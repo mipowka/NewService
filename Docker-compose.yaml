@@ -6,7 +6,7 @@ networks:
 
 services:
   app:
-    image: mipowka/bot-news-image
+    image: mipowka/bot-news-image:1.1
     ports:
       - "9090:8080"
     depends_on:

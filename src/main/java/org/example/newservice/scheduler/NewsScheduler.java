@@ -47,15 +47,15 @@ public class NewsScheduler {
     }
 
     /**
-     * Очистка старых новостей два раза в день в 8:00 17:00.
+     * Очистка старых новостей раз в день в 21:00.
      */
-    @Scheduled(cron = "0 0 8,17 * * *", zone = "GMT+3")
+    @Scheduled(cron = "0 0 21 * * *", zone = "GMT+3")
     public void cleanOldNews() {
         logger.info("Запуск задачи очистки старых новостей.");
 
         try {
             // Получаем список старых новостей для удаления
-            newsService.deleteOldSentNews();
+            newsService.deleteAllNews();
             logger.info("Очистка старых новостей завершена.");
         } catch (Exception e) {
             logger.error("Ошибка при очистке старых новостей.", e);
