@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: NewsService
+
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+logging:
+  level:
+    root: info
+    org.springframework.web: DEBUG
+  file:
+    name: logs/application.log
+
+bots:
+  bot:
+    username: newsbotegg_bot
+    token: 7941597210:AAG5jBqfSQgSX0_UthfQtPjgTm5BncpkEHM
+
